@@ -4,7 +4,7 @@ A focused technical assessment implementation. The architecture separates **glob
 
 ## Requirements
 
-- PHP 8.2+ with extensions required by Laravel (including pdo_mysql, mbstring, openssl, fileinfo, tokenizer, xml)
+- PHP 8.2+ with extensions required by Laravel
 - Composer 2
 - Node.js 20+ and npm
 - MySQL 8+ (or MariaDB)
@@ -76,10 +76,6 @@ Visit `http://localhost:8000`. Sign in at `/login` using `ADMIN_EMAIL` and `ADMI
 - Public pages never query the full product catalog: they display only rows linked via `shop_products`.
 - Deleting a global product cascades to all its shop listings. Removing a listing never deletes the shared product.
 - Uploaded thumbnails are validated as images up to 2MB. Uploads use Laravel's public storage disk.
-
-## Scope
-
-Only features specified by the assessment are implemented. Deliberately excluded: carts, checkout, ordering, payments, APIs, AI tools, customer accounts, shipping and inventory tracking.
 
 ## Packaging note
 
